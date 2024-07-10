@@ -89,67 +89,66 @@ infra/
 
 ## CI
 
-CI_Libs
+```
+sw_CI_Libs
 ├── README.md
-├── .github 													# Workflows y acciones (composite) 
+├── .github
 │   ├── workflows 
-│   │   ├── EMD_Check_Consistency_TRIGGER.yml
-│   │   ├── EMD_Post_Doc_TRIGGER.yml
-│   │   └── EMD_Version_TRIGGER.yml
+│   │   ├── sw_JOB_EMD_Check_Consistency_TRIGGER.yml
+│   │   ├── sw_JOB_EMD_Post_Doc_TRIGGER.yml
+│   │   └── sw_JOB_EMD_Version_TRIGGER.yml
 │   └── actions
-│       ├── EMD_Check_Consistency_TRIGGER.yml
-│       ├── EMD_Post_Doc_TRIGGER.yml
-│       ├── EMD_Version_TRIGGER.yml
-│       └── check_requisites.yaml
+│       ├── sw_JOB_EMD_Check_Consistency_TRIGGER.yml
+│       ├── sw_JOB_EMD_Post_Doc_TRIGGER.yml
+│       └── sw_JOB_EMD_Version_TRIGGER.yml
 └── items
     ├── github
-    │   └── workflows 											# Workflows a ser esparcidos en los repositorios requeridos
-    │       ├── EMD
+    │   └── workflows
+    │       ├── wf_EMD
     │       │   ├── README.md
-    │       │   ├── Check_Consistency_TRIGGER.yml
-    │       │   ├── Post_Doc_TRIGGER.yml
-    │       │   └── Version_TRIGGER.yml
-    │       ├── check_requisites
+    │       │   ├── sw_JOB_EMD_Check_Consistency_TRIGGER.yml
+    │       │   ├── sw_JOB_EMD_Post_Doc_TRIGGER.yml
+    │       │   └── sw_JOB_EMD_Version_TRIGGER.yml
+    │       ├── wf_check_requisites
     │       │   ├── README.md
-    │       │   └── check_requisites_TRIGGER.yaml
-    │       └── drop_between_releases
+    │       │   └── sw_JOB_wf_check_requisites_TRIGGER.yaml
+    │       └── wf_drop_between_releases
     │           ├── README.md
-    │           └── drop_between_releases_TRIGGER.yml
+    │           └── sw_JOB_drop_between_releases_TRIGGER.yml
     ├── jenkins
-    │   ├── ci_jobs												# Jobs de jenkins 
-	  │   │   ├── EMD 
-	  │	  │   │   ├── EMD_Check_Consistency
-	  │	  │   │   │   ├── README.md
-	  │	  │   │   │   └── code
-	  │	  │   │   │       ├── requirements.txt
-	  │	  │   │   │       ├── requirements.txt.dev
-	  │	  │   │   │       ├── EMD_Check_Consistency.json
-	  │	  │   │   │       ├── EMD_Check_Consistency.py
-	  │	  │   │   │       └── EMD_Check_Consistency.xml
-	  │	  │   │   ├── EMD_Post_Doc
-	  │	  │   │   │   ├── README.md
-	  │	  │   │   │   └── code
-	  │	  │   │   │       ├── requirements.txt
-	  │	  │   │   │       ├── requirements.txt.dev
-	  │	  │   │   │       ├── EMD_Post_Doc.json
-	  │	  │   │   │       ├── EMD_Post_Doc.py
-	  │	  │   │   │       └── EMD_Post_Doc.xml
-	  │	  │   │   ├── EMD_Version
-	  │	  │   │   │   ├── README.md
-	  │	  │   │   │   └── code
-	  │	  │   │   │       ├── requirements.txt
-	  │	  │   │   │       ├── requirements.txt.dev
-	  │	  │   │   │       ├── EMD_Version.json
-	  │	  │   │   │       ├── EMD_Version.py
-	  │	  │   │   │       └── EMD_Version.xml
-    │   │   └── drop_between_releases
+    │   ├── ci_jobs
+    │   │   ├── sw_JOB_EMD_Check_Consistency
+    │   │   │   ├── README.md
+    │   │   │   └── code
+    │   │   │       ├── requirements.txt
+    │   │   │       ├── requirements.txt.dev
+    │   │   │       ├── sw_JOB_EMD_Check_Consistency.json
+    │   │   │       ├── sw_JOB_EMD_Check_Consistency.py
+    │   │   │       └── sw_JOB_EMD_Check_Consistency.xml
+    │   │   ├── sw_JOB_EMD_Post_Doc
+    │   │   │   ├── README.md
+    │   │   │   └── code
+    │   │   │       ├── requirements.txt
+    │   │   │       ├── requirements.txt.dev
+    │   │   │       ├── sw_JOB_EMD_Post_Doc.json
+    │   │   │       ├── sw_JOB_EMD_Post_Doc.py
+    │   │   │       └── sw_JOB_EMD_Post_Doc.xml
+    │   │   ├── sw_JOB_EMD_Version
+    │   │   │   ├── README.md
+    │   │   │   └── code
+    │   │   │       ├── requirements.txt
+    │   │   │       ├── requirements.txt.dev
+    │   │   │       ├── sw_JOB_EMD_Version.json
+    │   │   │       ├── sw_JOB_EMD_Version.py
+    │   │   │       └── sw_JOB_EMD_Version.xml
+    │   │   └── sw_JOB_drop_between_releases
     │   │       ├── README.md
     │   │       └── code
     │   │           ├── requirements.txt
     │   │           ├── requirements.txt.dev
-    │   │           ├── drop_between_releases.json
-    │   │           ├── drop_between_releases.py
-    │   │           └── drop_between_releases.xml
+    │   │           ├── sw_JOB_drop_between_releases.json
+    │   │           ├── sw_JOB_drop_between_releases.py
+    │   │           └── sw_JOB_drop_between_releases.xml
     │   └── libraries
     │       ├── python
     │       │   ├── sw_ci_cm
@@ -166,8 +165,8 @@ CI_Libs
     │           ├── sw_jenkins_lib
     │           │   ├── README.md
     │           │   └── code
-    │           │       ├── ... # Código y archivos de configuración para librerías compartidas de Groovy (actualmente en ci-jobs)
-    └── libraries # Librerías de uso general
+    │           │       ├── ... # Código y archivos de configuración para librerías compartidas de Groovy
+    └── libraries
         ├── ci_emd
         │   ├── README.md
         │   └── code
@@ -235,3 +234,4 @@ CI_Libs
                     ├── pyproject.toml
                     ├── requirements.txt
                     └── setup.py
+```
