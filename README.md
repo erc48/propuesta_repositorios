@@ -2,6 +2,7 @@
 
 ## Infrastructura
 
+```
 infra/
 ├── ansible/
 │   ├── group_vars/
@@ -83,6 +84,8 @@ infra/
     ├── vault_staging.yml
     ├── vault_prod.yml  
     └── README.md  
+```
+    
 
 ## CI
 
